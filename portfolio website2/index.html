@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;   
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+        
+            hamburger.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        };
+    </script>
+
+
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-500">Vimukthi Lakshan</h1>
+        
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="#about" class="hover:text-blue-500 hover:font-bold">About</a></li>
+            <li><a href="#skills" class="hover:text-blue-500 hover:font-bold">Skills</a></li>
+            <li><a href="#projects" class="hover:text-blue-500 hover:font-bold">Projects</a></li>
+            <li><a href="#contact" class="hover:text-blue-500 hover:font-bold">Contact</a></li>
+        </ul>
+        
+        <!-- Mobile Hamburger Menu -->
+        <div class="md:hidden flex items-center">
+            <button id="hamburger" class="text-blue-500 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md p-4 absolute top-16 left-0 w-full">
+        <ul class="space-y-4">
+            <li><a href="#about" class="hover:text-blue-500 hover:font-bold">About</a></li>
+            <li><a href="#skills" class="hover:text-blue-500 hover:font-bold">Skills</a></li>
+            <li><a href="#projects" class="hover:text-blue-500 hover:font-bold">Projects</a></li>
+            <li><a href="#contact" class="hover:text-blue-500 hover:font-bold">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="h-screen flex flex-col items-center justify-center text-center p-6">
+        <img src="images/Profile1.png" alt="Profile" class="w-64 h-64 rounded-full shadow-xl border-4 border-blue-500 transform transition duration-500 hover:scale-110">
+        <h2 class="text-4xl font-extrabold mt-6 text-black-600 dark:text-blue-300">Hello, I'm Vimukthi Lakshan!</h2>
+        <p class="text-gray-600 mt-3 text-lg dark:text-gray-300 italic">Machine Learning Enthusiast | Data Scientist</p>
+        <div class="mt-6 space-x-4">
+            <a href="#projects" class="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transform transition hover:scale-110 hover:bg-blue-700">View Projects</a>
+            <a href="#contact" class="px-6 py-3 border-2 border-blue-600 text-blue-600 text-lg font-semibold rounded-lg transform transition hover:scale-110 hover:bg-blue-600 hover:text-white">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50 text-center px-6 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-black-600 dark:text-black-300">About Me</h2>
+            <p class="text-gray-600 mt-4 text-lg dark:text-gray-300 leading-relaxed">I am a passionate <span class="font-bold text-blue-500">Data Scientist</span> with a deep love for <span class="font-bold text-blue-500">Machine Learning</span> and <span class="font-bold text-blue-500">Artificial Intelligence</span>.</br> My expertise lies in <span class="text-blue-500 font-semibold">data visualization</span>, <span class="text-blue-500 font-semibold">predictive analytics</span>, and <span class="text-blue-500 font-semibold">big data processing</span>. I thrive on solving complex problems with data-driven solutions and developing innovative models that make an impact.</p>
+            <div class="mt-6 flex justify-center">
+                <a href="#projects" class="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transform transition hover:scale-110 hover:bg-blue-700">Explore My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 bg-gray-100 text-center px-6">
+        <h2 class="text-3xl font-bold text-blue-500">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 max-w-5xl mx-auto">
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">Python</span>
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">Machine Learning</span>
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">Data Visualization</span>
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">Big Data Analytics</span>
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">SQL</span>
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">Deep Learning</span>
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">Statistics</span>
+            <span class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">Flask/Django</span>
+        </div>
+    </section>
+    </section>
+
+    <section id="projects" class="py-16 bg-gray-100 text-center px-6">
+        <h2 class="text-3xl font-bold text-blue-500">Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 max-w-5xl mx-auto">
+            <div class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">
+                <h3 class="text-xl font-semibold">Project 1</h3>
+                <p class="text-gray-600 mt-2">A machine learning project that predicts bank loan approvals.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">
+                <h3 class="text-xl font-semibold">Project 2</h3>
+                <p class="text-gray-600 mt-2">An interactive dashboard for analyzing big data trends.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg transform transition duration-300 hover:scale-110 hover:font-bold">
+                <h3 class="text-xl font-semibold">Project 3</h3>
+                <p class="text-gray-600 mt-2">A predictive model for financial market analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white text-center px-6">
+        <h2 class="text-3xl font-bold text-blue-500">Contact Me</h2>
+        <p class="text-gray-600 mt-4">Feel free to reach out via email or connect on social media.</p>
+        <div class="mt-4">
+            <a href="mailto:your.email@example.com" class="text-blue-500 flex items-center justify-center">
+                <img src="images\gmail1.png" alt="Email Icon" class="mr-2 w-6 h-6">
+                vimukthil95@gmail.com
+            </a>
+        </div>
+        <div class="mt-4 flex justify-center space-x-6">
+            <a href="#" class="text-blue-500 flex items-center">
+                <img src="images\linkedin icon1.png" alt="LinkedIn Icon" class="mr-2 w-6 h-6">
+                LinkedIn
+            </a>
+            <a href="https://github.com/VimukthiL22" class="text-blue-500 flex items-center">
+                <img src="images\github icon1.png" alt="GitHub Icon" class="mr-2 w-6 h-6">
+                GitHub
+            </a>
+           
+        </div>
+    </section>
+    
+</body>
+</html>
+
